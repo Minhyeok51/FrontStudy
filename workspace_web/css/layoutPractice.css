@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 700px;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    height: 600px;
+    background-color: burlywood;
+}
+
+.item1 {
+    float: left;
+    width: 70%;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+.item2 {
+    float: left;
+    width: 70%;
+    height: 200px;
+    background-color: palegoldenrod;
+}
+
+.item3 {
+    float: left;
+    width: 70%;
+    height: 200px;
+    background-color: darkgrey;
+}
+
+footer {
+    clear: both;
+    height: 200px;
+    background-color: olivedrab;
+}
+
+.header_container a{
+    text-decoration: none;
+    color: black;
+}
+/* .header_container a:{
+    text-decoration: none;
+} */
+.header_container {
+    width: 100%;
+    height: 100%;
+}
+.header_container ul{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header_container ul li {
+    margin:20px;
+}
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%
+    }
+}
+    @media only screen and (max-width: 550px) {
+        aside {
+            background-color: burlywood;
+            width: 100%;
+            height: 200px;
+        }
+        .item1 {    
+            width: 33.3%;
+        }
+        .item2 {
+            width: 33.4%;
+        }
+        .item3 {        
+            width: 33.3%;
+        }
+        footer {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        .container {
+            background-color: black;
+        }
+        aside {
+            background-color: burlywood;
+            width: 100%;
+            height: 200px;
+        }
+        .item1,
+        .item2,
+        .item3 {
+            width: 100%;
+        }
+    }
