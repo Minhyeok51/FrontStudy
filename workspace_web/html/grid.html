@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: lightgray;
+            display: grid;
+            /* grid-template-rows: 100px 100px;    tr tr과 같다 */
+            /* grid-template-columns: 100px 100px 100px;   td td과 같다 */
+            row-gap: 5px;
+            column-gap: 5px;
+            grid-template-areas: 
+                'header header header'
+                'sidebar content content'
+                'footer footer footer';
+            /* align-items:start; */
+            /* justify-items:end; */
+            /* place-items: start end; 위에 두개랑 같은 뜻 */
+        }
+        .item{
+            background-color: red;
+            color: white;
+            border: 1px solid white;
+        }
+        .item:nth-child(2n){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="grid-area:header">header</div>
+        <div class="item" style="grid-area:sidebar">sidebar</div>
+        <div class="item" style="grid-area:content">content</div>
+        <div class="item" style="grid-area:footer">footer</div>
+        <!-- <div class="item" style="align-self:center">3번 아이템</div> -->
+        <!-- <div class="item" style="justify-self: start;">5번 아이템</div> -->
+        <!-- <div class="item" style="grid-area:B">5번 아이템</div> -->
+        <!-- <div class="item" style="grid-area:A">6번 아이템</div> -->
+    </div>
+    
+</body>
+</html>

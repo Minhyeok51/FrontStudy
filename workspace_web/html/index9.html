@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+                <li><label for="name">납품자명</label> : <input type="text" id="name"></li><br>
+                <li><label for="mail">email</label> : <input type="email" id="mail" placeholder="answer@naver.com"></li><br>
+                <li><label for="homePage">홈페이지</label> : <input type="url" id="homePage" value="http://"></li><br>
+                <li><label for="local">지역</label> : <select id="local"><option value="1">부산</option><br>
+                <option value="2">서울</option></select></li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>납품 정보</legend>
+            <ul>
+                <li><label for="itemName">상품명</label> : <input type="text" id="itemName"></li><br>
+                <li><label for="num">납품수량</label> : <input type="number" placeholder="최소 100" id="num"></li><br>
+                <li><label for="grade">납품등급</label> : <input type="range" id="grade"></li><br>
+                <li><label for="anythingElse">기타사항</label> : <textarea id="anythingElse" name="anythingElse"></textarea></li><br>
+            </ul>
+        </fieldset>
+        <br>
+        <button type="submit">send message</button>
+    </form>
+    
+</body>
+</html>
