@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 따로 속성값이 정해진 스타일있으면 그것을 우선 적용 */
+        a[target="_blank"]{
+            color:red;
+        }
+        a{
+            color:blue;
+        }
+        p[class^="cls"]{     
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" target="_self">a태그</a>
+    <a href="#" target="_blank">새창 a태그</a>
+    <a>하나더 a태그</a>
+
+    <p class="cls">P1</p>
+    <p class="clsBook">P2</p>
+    <p class="clsCoffee">P3</p>
+    <p class="watercls">P4</p>
+    <p class="waterclsCup">P5</p>
+    <p class="cls-">P6</p>
+    <p class="cls-abc">P7</p>
+</body>
+</html>

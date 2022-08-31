@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 3000px;
+            height: 10000px;
+            background: linear-gradient(orange, blue,purple,red,skyblue,lime,pink,coral)
+        }
+
+        div{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button onclick = "scTo()">ScrollTo</button>
+    <button onclick = "scBy()">ScrollBy</button>
+</div>
+    <script>
+        function scTo(){
+            window.scrollTo({left:0,top:0, behavior:"smooth"});   //이 위치로 이동하겠다. 
+        }
+        function scBy(){
+            window.scrollBy({left:200,top:200, behavior:"smooth"});   //현 시점에서 이만큼씩 이동하겠다. 누를때마다 이동됨
+        }
+    </script>
+</body>
+</html>

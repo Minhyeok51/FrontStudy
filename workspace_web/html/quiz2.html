@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding:0;}
+        body{ height:3000px}
+        #parent{
+            width:500px;
+            height:300px;
+            border:solid 5px #000000;
+            margin: 50px 0 0 50px;
+            position:relative;
+        }
+        .box{ width:100px; height:100px;}
+        .box1{background-color: red;}
+        .box2{background-color: green;
+            position:absolute;
+            top: 50px; left: 50px;
+        }
+        .box3   {background-color: yellow;}
+        .div1, .div2{margin:4rem; background-color: lightgray;}
+        .div2 li:nth-of-type(2n){color:red}
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="box box1">A</div>
+        <div class="box box2">B</div>
+        <div class="box box3">C</div>
+    </div>
+    <div class="div1">
+        <h3>div1</h3>
+        <ul>
+            <li>1번 라인</li>
+            <li>2번 라인</li>
+            <li>3번 라인</li>
+            <li>4번 라인</li>
+        </ul>
+    </div>
+    <div class="div2">
+        <h3>div2</h3>
+        <ul>
+            <li>1번 라인</li>
+            <li>2번 라인</li>
+            <li>3번 라인</li>
+            <li>4번 라인</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="title">Hello,<span style="display:none">Javascript!</span></p>
+
+    <p id ="textContent"></p>
+    <p id ="innerText"></p>
+    <p id ="innerHTML"></p>
+    <script>
+        document.querySelector("#textContent").textContent=`<strong>strong</strong> 속성`;
+        document.querySelector("#innerText").innerText=`<strong>strong</strong> 속성`;
+        document.querySelector("#innerHTML").innerHTML=`<strong>strong</strong> 속성`;
+        
+        const el1 = document.getElementById("title");
+        el1.style.color="red";
+
+        // console.log(el1.textContent);
+        // console.log(el1.innerText);
+        // console.log(el1.innerHTML);
+    </script>
+</body>
+</html>
