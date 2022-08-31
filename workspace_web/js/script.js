@@ -158,62 +158,63 @@ while(조건식){
     
     */
 // let num=1;
-let sum=0;
+let sum = 0;
 
-    // while(num <=100){
-    //     console.log(num);
-    //     sum +=num;
-    //     num++;
-    // }
-    // console.log(sum);
-        //0~20까지의 수중에서 홀수만큰수부터 차레대로 출력하기
-    for(let num=20; num>=0; num--){
-        if(num%2===0){
-            console.log(num);
-        }
-    }
+// while(num <=100){
+//     console.log(num);
+//     sum +=num;
+//     num++;
+// }
+// console.log(sum);
+//0~20까지의 수중에서 홀수만큰수부터 차레대로 출력하기
+for (let num = 20; num >= 0; num--) {
+  if (num % 2 === 0) {
+    console.log(num);
+  }
+}
 
-    for(let i =10; i>=1; i--){
-        for(let j=1; j<=i; j++){
-            process.stdout.write('*');
-        }
-        console.log();
-    }
-    
+for (let i = 10; i >= 1; i--) {
+  for (let j = 1; j <= i; j++) {
+    process.stdout.write("*");
+  }
+  console.log();
+}
 
-    let arr= ["banana", "apple", "orange"];
-    let arr2 = [10,20,30,40,50];
-    /*  자바 for(String s: arrays) >> arrays  안에 있는 값이나옴
+let arr = ["banana", "apple", "orange"];
+let arr2 = [10, 20, 30, 40, 50];
+/*  자바 for(String s: arrays) >> arrays  안에 있는 값이나옴
         JS for(Const item in arr) >> arr 값 x, 인덱스 0 1 2가 나옴
     */
-    for(let key in arr){        //in은 인덱스 번호를 key변수에 넣어줌
-        console.log(key);
-    }
-    for(let key of arr){        //of는 인덱스 값을 key 변수에 넣어줌 
-        console.log(key);
-    }
+for (let key in arr) {
+  //in은 인덱스 번호를 key변수에 넣어줌
+  console.log(key);
+}
+for (let key of arr) {
+  //of는 인덱스 값을 key 변수에 넣어줌
+  console.log(key);
+}
 
-    // for(let i= 0; i<arr.length; i++){
-    //     console.log(arr[i]);
-    // }
-    // for(let i= 0; i<arr2.length; i++){
-    //     console.log(arr2[i]);
-    // }
-    
-    console.log();
-    let obj ={name:"철수", age:"20", phone:"01023124352"};
-    console.log(obj.phone);
-    console.log();
+// for(let i= 0; i<arr.length; i++){
+//     console.log(arr[i]);
+// }
+// for(let i= 0; i<arr2.length; i++){
+//     console.log(arr2[i]);
+// }
 
-    for(let key in obj){
-        console.log(key +":"+ obj[key]);
-    }
+console.log();
+let obj = { name: "철수", age: "20", phone: "01023124352" };
+console.log(obj.phone);
+console.log();
 
-    let num =1;
-    while(true){
-        console.log(num)
-        if(num >5){
-            break;
-        }
-        num++;
-    }
+for (let key in obj) {
+  console.log(key + ":" + obj[key]);
+}
+
+let num = 1;
+while (true) {
+  console.log(num);
+  if (num > 5) {
+    break;
+  }
+  num++;
+}
