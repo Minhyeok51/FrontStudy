@@ -1,0 +1,21 @@
+
+body{
+  background-color: lightblue;
+}
+
+.container{
+  width: 500px;
+  margin: 0 auto;
+  /* height: 500px; */
+  /* background-color: burlywood; */
+}
+
+.todoHeader{
+  background-color: antiquewhite;
+  padding: 30px 10px;
+}
+
+.todoSection{
+  background-color: white;
+  padding: 30px 10px;
+}
