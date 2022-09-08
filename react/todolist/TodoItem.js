@@ -12,15 +12,18 @@ function TodoItem({ todoData, data, setTodoData, buttonStyle, dataId }) {
       textDecoration: finished ? "line-through" : "none",
       borderBottom: "1px solid black",
       padding: "5px",
+      minHeight: "35px",
     };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //1.저장하려는 텍스트를 불러와야한다.
+    //여기서 저장하는 과정을 작성
+
+    //1. 저장하려는 텍스트를 불러와야한다.
     console.log(inputName);
-    //2.텍스트를 저장하려는 todoData대상에 itemName에 저장한다.
-    //찾는 기준은 유니크한 id를 기준으로 todoData에서 찾아서 바꾸면 됨
+    //2. 텍스트를 저장하려는 todoData 대상에 itemName에 저장한다.
+    //찾는기준 ?유니크한 id를 기준으로 todoData에서 찾아서 바꾸면~
     let temp = todoData.map((tempData) => {
       if (tempData.id === dataId) {
         tempData.itemName = inputName;
@@ -28,8 +31,8 @@ function TodoItem({ todoData, data, setTodoData, buttonStyle, dataId }) {
       return tempData;
     });
     setTodoData(temp);
-    // data.itemName=inputName 이것도 됨
-    //3.저장 다했으면 ,수정화면x 목록보이는 화면전환1
+    // data.itemName = inputName;
+    //3. 저장 다했으면, 수정화면X 목록보이는 화면 전환
     setIsModifying(false);
     setInputName("");
   };
@@ -37,15 +40,16 @@ function TodoItem({ todoData, data, setTodoData, buttonStyle, dataId }) {
   if (isModifying === true) {
     return (
       <div style={itemStyle(false)} className="todoItem">
-        <form>
-          {/* <form onSubmit={(e)=>{
-            console.log('이 폼의 서브밋은 나다')
-            e.preventDefault();
-        }}>           submit효과의 주체는 폼이다 onSubmit()걸 수 있는건 form태그에만
-          <input type="text" value={inputName} onChange={(e)=>{
-            setInputName(e.target.value)
-          }} autoFocus></input>
-          <button>submit확인</button> */}
+        <form onSubmit={(e) => {handleSubmit(e)}}>
+          <input
+            type="text"
+            value={inputName}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setInputName(e.target.value);
+            }}
+            autoFocus
+          ></input>
           <button
             type="button"
             style={buttonStyle}
@@ -55,9 +59,9 @@ function TodoItem({ todoData, data, setTodoData, buttonStyle, dataId }) {
           >
             취소
           </button>
-          <button style={buttonStyle} onClick={(e) => {
-            handleSubmit(e)
-          }}>
+          <button type="submit" style={buttonStyle} onClick={
+            (e) => { handleSubmit(e)}
+            }>
             저장
           </button>
         </form>
@@ -97,8 +101,8 @@ function TodoItem({ todoData, data, setTodoData, buttonStyle, dataId }) {
           <button
             style={buttonStyle}
             onClick={() => {
-              setIsModifying(true);
               setInputName(data.itemName);
+              setIsModifying(true);
             }}
           >
             수정
